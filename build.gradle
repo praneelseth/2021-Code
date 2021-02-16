@@ -1,4 +1,5 @@
 plugins {
+    id "com.diffplug.gradle.spotless" version "3.28.0"
     id "java"
     id "edu.wpi.first.GradleRIO" version "2021.1.2"
 }
@@ -76,4 +77,19 @@ sim {
 jar {
     from { configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) } }
     manifest edu.wpi.first.gradlerio.GradleRIOPlugin.javaManifest(ROBOT_MAIN_CLASS)
+}
+
+spotless {
+    java {
+        googleJavaFormat()
+        paddedCell()
+        indentWithTabs(2)
+        indentWithSpaces(4)
+        removeUnusedImports()
+    }
+    java {
+        target "**/*.java"
+        licenseHeaderFile "$rootDir/LicenseHeader.txt"
+        targetExclude("photon-core/src/main/java/org/photonvision/PhotonVersion.java")
+    }
 }
