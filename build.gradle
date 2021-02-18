@@ -90,6 +90,5 @@ spotless {
     java {
         target "**/*.java"
         licenseHeaderFile "$rootDir/LicenseHeader.txt"
-        targetExclude("photon-core/src/main/java/org/photonvision/PhotonVersion.java")
     }
 }
