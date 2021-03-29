@@ -89,9 +89,9 @@ public class Robot extends TimedRobot {
     /** This function is called periodically during operator control. */
     @Override
     public void teleopPeriodic() {
-        if (m_XboxController.getBumperPressed(GenericHID.Hand.kLeft)) {
+        if (m_XboxController.getBumper(GenericHID.Hand.kLeft)) {
             mIntakeMotor.set(ControlMode.PercentOutput, Constants.IntakeConstants.kIntakePower);
-        } else if (m_XboxController.getBumperPressed(GenericHID.Hand.kRight)) {
+        } else if (m_XboxController.getBumper(GenericHID.Hand.kRight)) {
             mIntakeMotor.set(ControlMode.PercentOutput, -Constants.IntakeConstants.kIntakePower);
         } else {
             mIntakeMotor.set(ControlMode.PercentOutput, 0);

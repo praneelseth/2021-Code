@@ -13,7 +13,7 @@ package frc.robot;
 */
 public final class Constants {
     public static final class IntakeConstants {
-        public static double kIntakePower = 0.5;
+        public static double kIntakePower = 0.35;
         public static final int VictorSPXPort = 2;
     }
 
