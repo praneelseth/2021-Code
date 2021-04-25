@@ -1,5 +1,7 @@
 # FRC 6901 2021 Codebase
 
+[![CI](https://github.com/frc-6901/2021-Code/actions/workflows/main.yml/badge.svg)](https://github.com/frc-6901/2021-Code/actions/workflows/main.yml)
+
 This is the code base for FRC Team 6901 Knights Robotics.
 
 ## Contribution Guidelines
